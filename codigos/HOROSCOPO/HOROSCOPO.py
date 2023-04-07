@@ -1,3 +1,4 @@
+# Thiago version
 def signo(dia, mes):
     if mes == 3:
         return 'Peixes' if dia < 21 else 'Áries'
