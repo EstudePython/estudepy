@@ -1,6 +1,11 @@
-from unicodedata import normalize
-import urllib.request, ssl
-
+##
+def separar_data(dma):
+    a = dma % 10000
+    dma //= 10000
+    m = dma % 100
+    dma //= 100
+    d = dma
+    return d, m, a
 
 def signo(dia, mes):
     if mes == 3:
@@ -29,7 +34,14 @@ def signo(dia, mes):
         return 'Aquário' if dia < 19 else 'Peixes'
 
 
+def remover_acentos(texto):
+    from unicodedata import normalize
+    texto = str(texto)
+    return normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
+
+
 def horoscopo(signo_desejado):
+    import urllib.request, ssl
     signo_formatado = remover_acentos(signo_desejado).lower()
     minha_url = 'https://www.horoscopovirtual.com.br/horoscopo/' + signo_formatado
 
@@ -64,19 +76,6 @@ def main():
     # Saída de dados
     print(horoscopo_de_hoje)
 
-
-def remover_acentos(texto):
-    texto = str(texto)
-    return normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
-
-
-def separar_data(dma):
-    a = dma % 10000
-    dma //= 10000
-    m = dma % 100
-    dma //= 100
-    d = dma
-    return d, m, a
 
 
 if __name__ == '__main__':
