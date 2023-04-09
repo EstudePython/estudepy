@@ -77,6 +77,5 @@ def main():
     print(horoscopo_de_hoje)
 
 
-
 if __name__ == '__main__':
     main()
