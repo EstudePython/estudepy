@@ -4,5 +4,3 @@
 
 </div>
 
-# **EstudePython**
-
