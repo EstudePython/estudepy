@@ -1,2 +1,4 @@
-# estudipy
-Um repositário destinado a ser um local de compartilhar conhecimento
+![logo](https://avatars.githubusercontent.com/u/130183525?s=300&v)
+
+# **EstudePython**
+
