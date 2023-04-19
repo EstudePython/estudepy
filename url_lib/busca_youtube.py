@@ -13,10 +13,15 @@ def busca_youtube(link):
 
     resposta = urllib.request.urlopen(requisicao, context=contexto_ssl)
     pagina = resposta.read().decode('utf-8')
-    marcador_inicio = '<p class="text-pred">'
-    marcador_final = '<a class="webshare-link">Compartilhar</a>'
+    marcador_inicio = '<span class="yt-core-attributed-string yt-core-\
+        attributed-string--white-space-pre-wrap" role="text">'
+    marcador_final = '</span>'
 
     inicio = pagina.find(marcador_inicio) + len(marcador_inicio)
     final = pagina.find(marcador_final, inicio)
 
-    return signo_desejado + ':' + pagina[inicio:final].strip()
+    return pagina[inicio:final].strip()
+
+
+busca_youtube(
+    'https://www.youtube.com/watch?v=FNqdV5Zb_5Q&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6&index=8')
