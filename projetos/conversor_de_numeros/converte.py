@@ -14,16 +14,18 @@ def converte_numero(num, formato=2):
     if formato == 'd':
         formato = 10
     elif formato == 'b':
-        formato == 2
+        formato = 2
     elif formato == 'o':
-        formato == 8
+        formato = 8
+    # contem erros ao processar
     elif formato == 'h':
-        formato == 16
+        formato = 16
 
+    # essa lógica funciona até octa
     saida = ''
     while 0 < num:
         unidade = num % formato
-        saida = str(saida) + str(unidade)
+        saida = saida + str(unidade)
         tira_metade = num // formato
         num = tira_metade
         if num < 1:
@@ -33,24 +35,35 @@ def converte_numero(num, formato=2):
     return num, formato
 
 
-# x, y = int(input('Número: ')), int(input('Tipo: '))
-# Debug
-x, y = 396, 16
-
-x, y = converte_numero(x, y)
-
-u = c = ''
-if y == 2:
-    u = 'binário'
-    c = str(x).zfill(8)
-elif y == 8:
-    u = 'octal'
-elif y == 10:
-    u = 'decimal'
-elif y == 16:
-    u = 'hexadecimal'
-else:
-    u = 'Sei lá'
+def Hex_to_dec():
+    pass
 
 
-print(f'{c if y == 2 else x} {u}')
+def formata_numero(x, y):
+    # Debug
+    x, y = converte_numero(x, y)
+
+    u = k = ''
+    if y == 2:
+        u = 'binário'
+        k = str(x).zfill(8)
+    elif y == 8:
+        u = 'octal'
+    elif y == 10:
+        u = 'decimal'
+    elif y == 16:
+        u = 'hexadecimal'
+    else:
+        u = 'Sei lá'
+    return x, y, k, u
+
+
+def main():
+    # x, y = int(input('Número: ')), int(input('Tipo: '))
+    x, y, k, u = formata_numero(x=1024, y=2)
+    saida_numero = k if y == 2 else x
+    print(f'{saida_numero}')
+
+
+if __name__ == '__main__':
+    main()
