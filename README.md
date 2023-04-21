@@ -31,5 +31,5 @@ print(texto)
 
 
 [Roda pé]: #
-#### Para se tornar um colaborador, mande um email contendo seu username do github para [estudepython@gmail.com]
-[estudepython@gmail.com]:mailto:estudepython@gmail.com
+#### Para se tornar um colaborador, mande um email contendo seu username do github para [estudipython@gmail.com]
+[estudipython@gmail.com]:mailto:estudepithon@gmail.com
