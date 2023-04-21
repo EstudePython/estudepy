@@ -12,8 +12,8 @@ def busca_youtube(link):
 
     resposta = urllib.request.urlopen(requisicao, context=contexto_ssl)
     pagina = resposta.read().decode('utf-8')
-    marcador_inicio = '<span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap" role="text">'
-    marcador_final = '</span>'
+    marcador_inicio = '<body>'
+    marcador_final = '</body>'
 
     inicio = pagina.find(marcador_inicio) + len(marcador_inicio)
     final = pagina.find(marcador_final, inicio)
@@ -22,4 +22,4 @@ def busca_youtube(link):
 
 
 print(busca_youtube(
-    'https://www.youtube.com/watch?v=FNqdV5Zb_5Q&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6&index=8'))
+    'https://www.youtube.com/watch?v=hdDHg1p3YVc'))
