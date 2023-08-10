@@ -25,10 +25,6 @@ print(texto)
 
 
 ## Em construção
-## Ajude compartilhando seu conhecimento.
-
-
-
 
 [Roda pé]: #
 #### Para se tornar um colaborador, mande um email contendo seu username do github para [estudepython@gmail.com]
