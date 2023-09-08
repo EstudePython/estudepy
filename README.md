@@ -6,7 +6,7 @@
 
 <h1 align="center">Estude Python</h1>
 
-### Este repositório é destinado a testes e estudo de códigos na linguagem `Python`
+### Organização de estudantes pythonianos
 
 #### Comando Inicial:
 ```python
@@ -22,10 +22,3 @@ print('Estude' + ' ' + 'Python')
 texto = 'Estude Python'
 print(texto)
 ```
-
-
-## Em construção
-
-[Roda pé]: #
-#### Para se tornar um colaborador, mande um email contendo seu username do github para [estudepython@gmail.com]
-[estudepython@gmail.com]:mailto:estudepython@gmail.com
